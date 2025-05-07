@@ -122,7 +122,7 @@ export default function VerifyOTP() {
     <div className='flex min-h-screen flex-col items-center justify-center p-4 md:p-8'>
       <div className='container mx-auto space-y-8'>
         <div className='flex flex-col md:flex-row items-center'>
-          <div className='mb-6 w-1/2'>
+          <Link href='/' className='mb-6 w-1/2'>
             <Image
               src='/logo.png'
               alt='DesignDoc Logo'
@@ -130,7 +130,7 @@ export default function VerifyOTP() {
               height={150}
               priority
             />
-          </div>
+          </Link>
 
           <div className='w-1/2'>
             <div className='text-center space-y-2'>

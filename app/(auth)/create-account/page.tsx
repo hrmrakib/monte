@@ -109,7 +109,7 @@ export default function SignUpPage() {
         <div className='w-full flex flex-col md:flex-row items-center justify-between'>
           {/* Logo Section */}
           <div className='hidden w-full md:w-1/2 md:flex items-center justify-start p-8 '>
-            <div className='max-'>
+            <Link href='/'>
               <Image
                 src='/logo.svg'
                 alt='DesignDoc Logo'
@@ -117,7 +117,7 @@ export default function SignUpPage() {
                 height={300}
                 className='mb-2'
               />
-            </div>
+            </Link>
           </div>
 
           {/* Form Section */}

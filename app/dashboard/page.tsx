@@ -676,9 +676,9 @@ export default function Home() {
           </button>
         </div>
         <div className='flex items-center gap-2'>
-          <Button variant='ghost' size='icon' className='md:hidden'>
+          {/* <Button variant='ghost' size='icon' className='md:hidden'>
             <ArrowLeft className='h-5 w-5' />
-          </Button>
+          </Button> */}
           <h1 className='text-xl font-bold text-teal-700 md:text-2xl'>
             Get DesignDoc Presentations
           </h1>
@@ -739,7 +739,7 @@ export default function Home() {
                     <div className='flex items-center gap-2'>
                       <Button
                         size='sm'
-                        className='bg-orange-500 hover:bg-orange-600 text-white'
+                        className='bg-[#F99F04] hover:bg-[#f99f04d7] text-white'
                       >
                         Add Animations
                       </Button>
@@ -767,62 +767,3 @@ export default function Home() {
     </div>
   );
 }
-
-// import { LayoutDashboard, BarChart, LineChart, Users, FileText } from "lucide-react"
-
-// export default function DashboardPage() {
-//   return (
-//     <div className="container mx-auto px-4 py-8 md:py-16">
-//       <div className="mb-8 flex items-center justify-center gap-2">
-//         <LayoutDashboard className="h-6 w-6 text-teal-700" />
-//         <h1 className="text-3xl font-bold text-teal-700 md:text-4xl">Dashboard</h1>
-//       </div>
-
-//       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-//         <div className="rounded-lg border bg-white p-4 shadow-sm">
-//           <div className="mb-2 flex items-center justify-between">
-//             <h3 className="font-medium">Presentations</h3>
-//             <FileText className="h-5 w-5 text-teal-600" />
-//           </div>
-//           <p className="text-2xl font-bold">24</p>
-//         </div>
-
-//         <div className="rounded-lg border bg-white p-4 shadow-sm">
-//           <div className="mb-2 flex items-center justify-between">
-//             <h3 className="font-medium">Views</h3>
-//             <Users className="h-5 w-5 text-teal-600" />
-//           </div>
-//           <p className="text-2xl font-bold">1,254</p>
-//         </div>
-
-//         <div className="rounded-lg border bg-white p-4 shadow-sm">
-//           <div className="mb-2 flex items-center justify-between">
-//             <h3 className="font-medium">Engagement</h3>
-//             <BarChart className="h-5 w-5 text-teal-600" />
-//           </div>
-//           <p className="text-2xl font-bold">68%</p>
-//         </div>
-
-//         <div className="rounded-lg border bg-white p-4 shadow-sm">
-//           <div className="mb-2 flex items-center justify-between">
-//             <h3 className="font-medium">Growth</h3>
-//             <LineChart className="h-5 w-5 text-teal-600" />
-//           </div>
-//           <p className="text-2xl font-bold">+12%</p>
-//         </div>
-//       </div>
-
-//       <div className="mt-8 grid gap-6 md:grid-cols-2">
-//         <div className="rounded-lg border bg-white p-4 shadow-sm">
-//           <h3 className="mb-4 font-medium">Monthly Performance</h3>
-//           <div className="aspect-[4/3] rounded-md bg-gray-100"></div>
-//         </div>
-
-//         <div className="rounded-lg border bg-white p-4 shadow-sm">
-//           <h3 className="mb-4 font-medium">Content Distribution</h3>
-//           <div className="aspect-[4/3] rounded-md bg-gray-100"></div>
-//         </div>
-//       </div>
-//     </div>
-//   )
-// }

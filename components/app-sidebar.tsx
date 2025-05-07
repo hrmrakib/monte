@@ -84,41 +84,17 @@ export function AppSidebar() {
           </Link>
         </SidebarHeader>
 
-        {/* <SidebarContent>
-          <SidebarMenu>
-            {navItems.map((item) => (
-              <SidebarMenuItem key={item.href}>
-                <SidebarMenuButton
-                  asChild
-                  isActive={pathname === item.href}
-                  className={
-                    pathname === item.href
-                      ? "bg-orange-500 text-white hover:bg-orange-600 hover:text-white"
-                      : ""
-                  }
-                >
-                  <Link href={item.href} className='flex items-center gap-2'>
-                    <item.icon className='h-5 w-5' />
-                    <span>{item.title}</span>
-                  </Link>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-            ))}
-          </SidebarMenu>
-        </SidebarContent> */}
-
         <SidebarContent>
           <SidebarMenu>
             {navItems.map((item) => (
-              <SidebarMenuItem key={item.href} className='mb-2 ml-8'>
+              <SidebarMenuItem
+                key={item.href}
+                className={`mb-2 ml-6 mr-2 ${pathname === item.href ? "" : ""}`}
+              >
                 <SidebarMenuButton
                   asChild
                   isActive={pathname === item.href}
-                  className={
-                    pathname === item.href
-                      ? "bg-orange-500 text-white hover:bg-orange-600 hover:text-white"
-                      : ""
-                  }
+                  className={pathname === item.href ? "" : ""}
                 >
                   <Link href={item.href} className='flex items-center gap-2'>
                     <item.icon />
@@ -135,10 +111,10 @@ export function AppSidebar() {
         <SidebarFooter className='p-4'>
           <UserProfileDropdown
             trigger={
-              <button className='flex h-8 w-8 items-center justify-center rounded-md hover:bg-gray-100'>
+              <button className='flex h-8 w-8 items-center justify-center outline-none rounded-md hover:bg-gray-100'>
                 <svg
-                  width='32'
-                  height='32'
+                  width='320'
+                  height='320'
                   viewBox='0 0 32 32'
                   fill='none'
                   xmlns='http://www.w3.org/2000/svg'

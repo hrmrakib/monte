@@ -65,7 +65,7 @@ export function SettingsDialog({ open, onOpenChange }: SettingsDialogProps) {
 
           <Button
             variant="ghost"
-            className="h-auto p-0 text-sm font-normal text-red-600 hover:bg-transparent hover:text-red-800"
+            className="h-auto py-2 px-3 text-sm font-normal bg-red-600 text-white hover:bg-transparent hover:bg-red-700 hover:text-white"
           >
             Delete User
           </Button>

@@ -78,7 +78,7 @@ export default function SignInPage() {
       <div className='container mx-auto flex flex-col md:flex-row items-center'>
         {/* Logo Section */}
         <div className='hidden w-full md:w-1/2 md:flex items-center justify-center p-8'>
-          <div className='max-w-xs'>
+          <Link href='/' className='max-w-xs'>
             <Image
               src='/logo.svg'
               alt='DesignDoc Logo'
@@ -86,7 +86,7 @@ export default function SignInPage() {
               height={150}
               className='mb-2'
             />
-          </div>
+          </Link>
         </div>
 
         {/* Form Section */}

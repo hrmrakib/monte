@@ -676,9 +676,9 @@ export default function Home() {
           </button>
         </div>
         <div className='flex items-center gap-2'>
-          <Button variant='ghost' size='icon' className='md:hidden'>
+          {/* <Button variant='ghost' size='icon' className='md:hidden'>
             <ArrowLeft className='h-5 w-5' />
-          </Button>
+          </Button> */}
           <h1 className='text-xl font-bold text-teal-700 md:text-2xl'>
             Get DesignDoc Presentations
           </h1>
@@ -739,7 +739,7 @@ export default function Home() {
                     <div className='flex items-center gap-2'>
                       <Button
                         size='sm'
-                        className='bg-orange-500 hover:bg-orange-600 text-white'
+                        className='bg-[#F99F04] hover:bg-[#f99f04d7] text-white'
                       >
                         Add Animations
                       </Button>
