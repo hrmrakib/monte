@@ -89,16 +89,25 @@ export function AppSidebar() {
             {navItems.map((item) => (
               <SidebarMenuItem
                 key={item.href}
-                className={`mb-2 ml-6 mr-2 ${pathname === item.href ? "" : ""}`}
+                className={`group mb-2 ml-6 mr-2 rounded-full ${
+                  pathname === item.href ? "" : ""
+                }`}
               >
                 <SidebarMenuButton
                   asChild
                   isActive={pathname === item.href}
-                  className={pathname === item.href ? "" : ""}
+                  className={pathname === item.href ? "bg-black" : ""}
                 >
-                  <Link href={item.href} className='flex items-center gap-2'>
+                  <Link
+                    href={item.href}
+                    className='flex items-center gap-2 group'
+                  >
                     <item.icon />
-                    <span className='text-base text-[#20474E]'>
+                    <span
+                      className={`text-base ${
+                        pathname === item.href ? "text-white" : "text-[#20474E]"
+                      } hover:text-white group-data-[active=true]:hover:text-white`}
+                    >
                       {item.title}
                     </span>
                   </Link>

@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import { SettingsDialog } from "./settings-dialog";
+import { useRouter } from "next/navigation";
 
 interface UserProfileDropdownProps {
   trigger: React.ReactNode;
@@ -21,6 +22,7 @@ interface UserProfileDropdownProps {
 
 export function UserProfileDropdown({ trigger }: UserProfileDropdownProps) {
   const [settingsOpen, setSettingsOpen] = useState(false);
+  const router = useRouter();
 
   return (
     <>
@@ -63,6 +65,7 @@ export function UserProfileDropdown({ trigger }: UserProfileDropdownProps) {
           <div className='p-2'>
             <Button
               variant='outline'
+              onClick={() => router.push("/subscription")}
               className='w-full justify-between bg-[#F99F04] hover:bg-[#f99f04d7] text-white hover:text-gray-50 rounded-full'
             >
               <span>Upgrade Plan</span>

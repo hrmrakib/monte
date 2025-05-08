@@ -10,7 +10,7 @@ import { Eye, EyeOff } from "lucide-react";
 export default function SignInPage() {
   const [formData, setFormData] = useState({
     name: "",
-    password: "",
+    password: "", 
     remember: false,
   });
   const [showPassword, setShowPassword] = useState(false);

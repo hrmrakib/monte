@@ -9,16 +9,206 @@ import { ChatInput } from "@/components/chat/chat-input";
 import { PresentationCard } from "@/components/presentation/presentation-card";
 
 // Sample data for the chat messages
+// const initialMessages = [
+//   {
+//     id: 1,
+//     content: "I want to make",
+//     isUser: true,
+//   },
+//   {
+//     id: 2,
+//     content:
+//       "I am a sales executive I need a presentation for my company vision and sales make a presentation with relevant image and data",
+//     isUser: true,
+//   },
+//   {
+//     id: 3,
+//     content: (
+//       <div>
+//         <p>
+//           I'd be happy to help you create a presentation for your company vision
+//           and sales, to make this presentation visually appealing with relevant
+//           images and data. I need to use a tool that can generate slides.
+//           However, creating a presentation will take some time and credits.
+//           Would you like me to proceed with creating this presentation for your
+//           sales vision? To create a more tailored presentation, could you
+//           provide me with a bit more information about:
+//         </p>
+//         <ol className='list-decimal pl-5 mt-2'>
+//           <li>what industry your company is in</li>
+//           <li>any specific aspects of your vision you want to highlight</li>
+//           <li>any key sales metrics or goals you'd like to include</li>
+//         </ol>
+//         <p className='mt-2'>
+//           This will help me create a more relevant and effective presentation
+//           for you.
+//         </p>
+//       </div>
+//     ),
+//     showCopy: true,
+//   },
+//   {
+//     id: 4,
+//     content: "okay update and need more details",
+//     isUser: true,
+//   },
+//   {
+//     id: 5,
+//     content: (
+//       <div>
+//         <p>
+//           I'd be happy to create a presentation for you, but I need more
+//           specific details to make it relevant and effective for your needs as a
+//           sales executive. Could you please provide the following information:
+//         </p>
+//         <ol className='list-decimal pl-5 mt-2'>
+//           <li>
+//             What industry or sector is your company in? (e.g., technology,
+//             healthcare, retail, etc.)
+//           </li>
+//           <li>
+//             What are the key elements of your company's vision you want to
+//             emphasize?
+//           </li>
+//           <li>
+//             What type of sales data would you like to include? (e.g., current
+//             performance, targets, market trends)
+//           </li>
+//           <li>
+//             Who is the target audience for this presentation? (e.g., team
+//             members, potential clients, stakeholders)
+//           </li>
+//           <li>How many slides would you prefer for this presentation?</li>
+//           <li>Are there any specific design preferences you have?</li>
+//         </ol>
+//         <p className='mt-2'>
+//           Once you provide these details, I can create a customized presentation
+//           with relevant images and data that effectively communicates your
+//           company's vision and sales strategy.
+//         </p>
+//       </div>
+//     ),
+//     showCopy: true,
+//   },
+//   {
+//     id: 6,
+//     content: "okay create now my presentation",
+//     isUser: true,
+//   },
+//   {
+//     id: 7,
+//     content: "using tool 1: clarification",
+//     isUser: true,
+//   },
+//   {
+//     id: 8,
+//     content: (
+//       <div>
+//         <p>
+//           I'd be happy to create your presentation, but I still need some basic
+//           information to make it relevant. Could you please tell me at least
+//           what industry your company is in and a brief description of your
+//           company's vision or sales focus? This would help me create a more
+//           tailored and effective presentation for you.
+//         </p>
+//       </div>
+//     ),
+//   },
+//   {
+//     id: 9,
+//     content: "create my presentation",
+//     isUser: true,
+//   },
+//   {
+//     id: 10,
+//     content: (
+//       <div>
+//         <p>
+//           I'll create a general sales executive presentation focused on company
+//           vision and sales strategy, since you haven't provided specific details
+//           about your industry or company. I'll design a versatile presentation
+//           that you can later customize with your specific information. This
+//           process will take several minutes and will use credits. I'll proceed
+//           with creating this presentation now.
+//         </p>
+//         <div className='mt-4'>
+//           <p className='font-medium mb-2'>Using Tool</p>
+//           <div className='flex items-center gap-2'>
+//             <FileText className='h-5 w-5 text-teal-700' />
+//             <span>Presentation</span>
+//             <span className='text-sm text-gray-500'>With 8 Slides</span>
+//           </div>
+//         </div>
+//       </div>
+//     ),
+//   },
+//   {
+//     id: 11,
+//     content: (
+//       <div>
+//         <PresentationCard
+//           title='Sales Executive Vision & Strategy Presentation'
+//           slideCount={8}
+//         />
+//         <div className='mt-4'>
+//           <p>
+//             I've created a professional sales executive vision & strategy
+//             presentation for you, the presentation consists of 8 slides that
+//             cover the essential aspects of company vision and sales strategy,
+//             you can view and download the complete presentation from the link
+//             above.
+//           </p>
+//           <p className='mt-2 font-medium'>Presentation overview:</p>
+//           <p>The presentation includes:</p>
+//           <ol className='list-decimal pl-5 mt-2'>
+//             <li>
+//               Title slide: Introduction to the presentation with a professional
+//               business theme
+//             </li>
+//             <li>
+//               Company vision: outlining the core vision and mission of your
+//               organization
+//             </li>
+//             <li>
+//               Market analysis: overview of market trends and opportunities
+//             </li>
+//             <li>
+//               Sales strategy: key strategic approaches to achieve sales targets
+//             </li>
+//             <li>
+//               Team structure: organizational framework for the sales department
+//             </li>
+//             <li>
+//               Product/service: specific information about the key sales
+//               offerings
+//             </li>
+//             <li>
+//               Success metrics: how performance will be measured and tracked
+//             </li>
+//             <li>Call to action: next steps and implementation plan</li>
+//           </ol>
+//         </div>
+//       </div>
+//     ),
+//   },
+//   {
+//     id: 12,
+//     content:
+//       "I am a university student I have a presentation my topics is environment pollution make a perfect presentation for me with relevant information",
+//     isUser: true,
+//   },
+// ];
+
 const initialMessages = [
   {
     id: 1,
-    content: "I want to make",
+    content: "I need help creating something new.",
     isUser: true,
   },
   {
     id: 2,
     content:
-      "I am a sales executive I need a presentation for my company vision and sales make a presentation with relevant image and data",
+      "I’m a marketing manager and I need a presentation about our product launch plan including visuals and strategy.",
     isUser: true,
   },
   {
@@ -26,22 +216,18 @@ const initialMessages = [
     content: (
       <div>
         <p>
-          I'd be happy to help you create a presentation for your company vision
-          and sales, to make this presentation visually appealing with relevant
-          images and data. I need to use a tool that can generate slides.
-          However, creating a presentation will take some time and credits.
-          Would you like me to proceed with creating this presentation for your
-          sales vision? To create a more tailored presentation, could you
-          provide me with a bit more information about:
+          I’d love to assist with your product launch presentation. To make it
+          impactful and tailored, I’ll need a few details first. Once I have the
+          necessary information, I’ll use a slide-generation tool to create a
+          polished deck. Can you please provide:
         </p>
         <ol className='list-decimal pl-5 mt-2'>
-          <li>what industry your company is in</li>
-          <li>any specific aspects of your vision you want to highlight</li>
-          <li>any key sales metrics or goals you'd like to include</li>
+          <li>Your product name and key features</li>
+          <li>Your target audience</li>
+          <li>Any specific launch goals or milestones</li>
         </ol>
         <p className='mt-2'>
-          This will help me create a more relevant and effective presentation
-          for you.
+          These details will help ensure the presentation fits your exact needs.
         </p>
       </div>
     ),
@@ -49,7 +235,7 @@ const initialMessages = [
   },
   {
     id: 4,
-    content: "okay update and need more details",
+    content: "Alright, updating the info. What else is needed?",
     isUser: true,
   },
   {
@@ -57,34 +243,20 @@ const initialMessages = [
     content: (
       <div>
         <p>
-          I'd be happy to create a presentation for you, but I need more
-          specific details to make it relevant and effective for your needs as a
-          sales executive. Could you please provide the following information:
+          Great! Here are a few more things that would help finalize your
+          presentation:
         </p>
         <ol className='list-decimal pl-5 mt-2'>
-          <li>
-            What industry or sector is your company in? (e.g., technology,
-            healthcare, retail, etc.)
-          </li>
-          <li>
-            What are the key elements of your company's vision you want to
-            emphasize?
-          </li>
-          <li>
-            What type of sales data would you like to include? (e.g., current
-            performance, targets, market trends)
-          </li>
-          <li>
-            Who is the target audience for this presentation? (e.g., team
-            members, potential clients, stakeholders)
-          </li>
-          <li>How many slides would you prefer for this presentation?</li>
-          <li>Are there any specific design preferences you have?</li>
+          <li>What market segment are you targeting?</li>
+          <li>What problems does your product solve?</li>
+          <li>Do you want to include competitor comparisons?</li>
+          <li>Who will be viewing this presentation?</li>
+          <li>Ideal number of slides?</li>
+          <li>Preferred style (corporate, modern, playful, etc.)?</li>
         </ol>
         <p className='mt-2'>
-          Once you provide these details, I can create a customized presentation
-          with relevant images and data that effectively communicates your
-          company's vision and sales strategy.
+          Once I have this, I’ll generate a tailored presentation complete with
+          relevant visuals.
         </p>
       </div>
     ),
@@ -92,12 +264,12 @@ const initialMessages = [
   },
   {
     id: 6,
-    content: "okay create now my presentation",
+    content: "Yes, please create the presentation now.",
     isUser: true,
   },
   {
     id: 7,
-    content: "using tool 1: clarification",
+    content: "Tool selected: SlideBuilder – Confirming inputs.",
     isUser: true,
   },
   {
@@ -105,18 +277,16 @@ const initialMessages = [
     content: (
       <div>
         <p>
-          I'd be happy to create your presentation, but I still need some basic
-          information to make it relevant. Could you please tell me at least
-          what industry your company is in and a brief description of your
-          company's vision or sales focus? This would help me create a more
-          tailored and effective presentation for you.
+          Just confirming — I still need the product name and audience type.
+          Once I have these, I’ll generate a strong and focused presentation for
+          your launch strategy.
         </p>
       </div>
     ),
   },
   {
     id: 9,
-    content: "create my presentation",
+    content: "Let’s proceed with creating the slides.",
     isUser: true,
   },
   {
@@ -124,19 +294,16 @@ const initialMessages = [
     content: (
       <div>
         <p>
-          I'll create a general sales executive presentation focused on company
-          vision and sales strategy, since you haven't provided specific details
-          about your industry or company. I'll design a versatile presentation
-          that you can later customize with your specific information. This
-          process will take several minutes and will use credits. I'll proceed
-          with creating this presentation now.
+          Since I haven’t received specific inputs, I’ll build a general product
+          launch strategy deck. You can easily customize it later. The deck will
+          contain engaging slides designed for corporate presentations.
         </p>
         <div className='mt-4'>
-          <p className='font-medium mb-2'>Using Tool</p>
+          <p className='font-medium mb-2'>Slide Generator Activated</p>
           <div className='flex items-center gap-2'>
             <FileText className='h-5 w-5 text-teal-700' />
-            <span>Presentation</span>
-            <span className='text-sm text-gray-500'>With 8 Slides</span>
+            <span>Product Launch Deck</span>
+            <span className='text-sm text-gray-500'>8 Custom Slides</span>
           </div>
         </div>
       </div>
@@ -147,45 +314,26 @@ const initialMessages = [
     content: (
       <div>
         <PresentationCard
-          title='Sales Executive Vision & Strategy Presentation'
+          title='Product Launch Strategy Presentation'
           slideCount={8}
         />
         <div className='mt-4'>
           <p>
-            I've created a professional sales executive vision & strategy
-            presentation for you, the presentation consists of 8 slides that
-            cover the essential aspects of company vision and sales strategy,
-            you can view and download the complete presentation from the link
-            above.
+            Your product launch presentation is ready. It includes essential
+            elements to communicate your strategy clearly and persuasively.
+            You’ll find a download link above.
           </p>
-          <p className='mt-2 font-medium'>Presentation overview:</p>
-          <p>The presentation includes:</p>
+          <p className='mt-2 font-medium'>Slide Summary:</p>
+          <p>This deck includes:</p>
           <ol className='list-decimal pl-5 mt-2'>
-            <li>
-              Title slide: Introduction to the presentation with a professional
-              business theme
-            </li>
-            <li>
-              Company vision: outlining the core vision and mission of your
-              organization
-            </li>
-            <li>
-              Market analysis: overview of market trends and opportunities
-            </li>
-            <li>
-              Sales strategy: key strategic approaches to achieve sales targets
-            </li>
-            <li>
-              Team structure: organizational framework for the sales department
-            </li>
-            <li>
-              Product/service: specific information about the key sales
-              offerings
-            </li>
-            <li>
-              Success metrics: how performance will be measured and tracked
-            </li>
-            <li>Call to action: next steps and implementation plan</li>
+            <li>Cover slide with branding</li>
+            <li>Product overview</li>
+            <li>Audience analysis</li>
+            <li>Marketing & distribution strategy</li>
+            <li>Timeline & launch phases</li>
+            <li>Competitive positioning</li>
+            <li>Success KPIs</li>
+            <li>Call to action / next steps</li>
           </ol>
         </div>
       </div>
@@ -194,7 +342,7 @@ const initialMessages = [
   {
     id: 12,
     content:
-      "I am a university student I have a presentation my topics is environment pollution make a perfect presentation for me with relevant information",
+      "I’m a high school student preparing a presentation on global warming. Please create a clear, engaging deck for me.",
     isUser: true,
   },
 ];
