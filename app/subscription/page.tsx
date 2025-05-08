@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 export default function PricingPage() {
@@ -109,9 +110,9 @@ export default function PricingPage() {
                 ))}
               </ul>
 
-              <button className='w-full py-3 px-4 bg-[#F99F04] hover:bg-[#f99f04c4] text-[#FAFAFA] font-medium rounded-md transition-colors'>
+              <Link href={"/subscription/basic"} className='w-full py-3 px-4 bg-[#F99F04] hover:bg-[#f99f04c4] text-[#FAFAFA] font-medium rounded-md transition-colors'>
                 Upgrade to Plus
-              </button>
+              </Link>
             </div>
           ))}
         </div>

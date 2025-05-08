@@ -15,7 +15,7 @@ export function SuccessModal({ open, onOpenChange }: SuccessModalProps) {
             <Check className='h-10 w-10 text-orange-400' />
           </div>
           <h2 className='text-2xl font-semibold text-teal-800 mb-2'>
-            Successfully Subscribe
+            Successfully Subscribe!
           </h2>
         </div>
       </DialogContent>
