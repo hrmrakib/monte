@@ -505,7 +505,7 @@ const SidebarMenuItem = React.forwardRef<
   <li
     ref={ref}
     data-sidebar='menu-item'
-    className={cn("group/menu-item relative rounded-full ", className)}
+    className={cn("grou/menu-item relative rounded-full ", className)}
     {...props}
   />
 ));

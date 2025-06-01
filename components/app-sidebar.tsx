@@ -89,24 +89,27 @@ export function AppSidebar() {
             {navItems.map((item) => (
               <SidebarMenuItem
                 key={item.href}
-                className={`group mb-2 ml-6 mr-2 rounded-full ${
+                className={`mb-2 ml-6 mr-2 rounded-full ${
                   pathname === item.href ? "" : ""
                 }`}
               >
                 <SidebarMenuButton
                   asChild
                   isActive={pathname === item.href}
-                  className={pathname === item.href ? "bg-black" : ""}
+                  className={
+                    pathname === item.href ? "bg-black" : "text-[#20474E]"
+                  }
                 >
                   <Link
                     href={item.href}
-                    className='flex items-center gap-2 group'
+                    className={`flex items-center gap-2 text-[#20474E] transition-colors duration-200`}
                   >
                     <item.icon />
                     <span
-                      className={`text-base ${
-                        pathname === item.href ? "text-white" : "text-[#20474E]"
-                      } hover:text-white group-data-[active=true]:hover:text-white`}
+                      // className={`text-base ${
+                      //   pathname === item.href ? "text-white" : "text-[#20474E]"
+                      // } group-data-[active=true]:hover:text-white`}
+                      className={`text-base`}
                     >
                       {item.title}
                     </span>
@@ -117,7 +120,7 @@ export function AppSidebar() {
           </SidebarMenu>
         </SidebarContent>
 
-        <SidebarFooter className='p-4'>
+        <SidebarFooter className='p-'>
           <UserProfileDropdown
             trigger={
               <button className='flex h-8 w-8 items-center justify-center outline-none rounded-md hover:bg-gray-100'>

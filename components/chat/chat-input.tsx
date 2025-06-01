@@ -12,7 +12,7 @@ interface ChatInputProps {
 
 export function ChatInput({
   onSend,
-  placeholder = "i am a university student i have a presentation my topics is Environment pollution make a perfect presentation for me with relevant information",
+  placeholder = "I am a university student i have a presentation my topics is Environment pollution make a perfect presentation for me with relevant information",
 }: ChatInputProps) {
   const [input, setInput] = useState("");
 
@@ -31,9 +31,9 @@ export function ChatInput({
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder={placeholder}
-          className='min-h-[160px] flex-1 resize-none border-0 bg-transparent p-2 focus-visible:ring-0'
+          className='min-h-[160px] w-full flex-1 resize-none border-0 bg-transparent p-2 focus-visible:ring-0 outline-none focus:outline-none'
         />
-        <div className='flex items-center gap-2 self-end'>
+        <div className='absolute bottom-2 right-2 flex items-center gap-2 self-end'>
           <Button
             type='button'
             variant='ghost'

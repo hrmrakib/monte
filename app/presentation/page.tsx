@@ -641,7 +641,7 @@ export default function Home() {
       {/* Header */}
       <header className='flex items-center justify-between border-b p-4'>
         <div className='flex items-center gap-5'>
-          <button className='cursor-pointer'>
+          {/* <button className='cursor-pointer'>
             <svg
               width='24'
               height='24'
@@ -656,9 +656,9 @@ export default function Home() {
                 fill='#20474E'
               />
             </svg>
-          </button>
+          </button> */}
 
-          <button className='cursor-pointer'>
+          {/* <button className='cursor-pointer'>
             <svg
               width='24'
               height='24'
@@ -673,7 +673,7 @@ export default function Home() {
                 fill='#20474E'
               />
             </svg>
-          </button>
+          </button> */}
         </div>
         <div className='flex items-center gap-2'>
           {/* <Button variant='ghost' size='icon' className='md:hidden'>
